@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 1e3 1e3" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <title>key icon</title>
+ <g transform="translate(-76.9 -55.5) scale(2.4)" stroke-width=".0864">
+  <path d="m327 38.9c-64.9 0-118 52.7-118 117 0 64.9 52.9 118 118 118 64.9 0 117-52.9 117-118 0-64.9-52.3-117-117-117m28.3 59.1c16.2 0 29.5 12.9 29.5 29.1s-13.3 29.1-29.5 29.1-29.1-12.9-29.1-29.1 12.9-29.1 29.1-29.1"/>
+  <path d="m32.8 363v29.5l29.5 29.1h58.7l29.1-29.1v-29.5h29.5v-29.1h29.1v-29.5h59.1l34.1-34.1-78.2-69.1-15 15v29.1l-147 147v-29.5l162-162-9.98-18.3z"/>
+ </g>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:description>based on https://www.freeiconspng.com/img/26605 by Ahkâm</dc:description>
+    <dc:title>key icon</dc:title>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+</svg>
