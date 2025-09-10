@@ -26,9 +26,13 @@
     <script src="static/js/pwdgen.js"></script>
     <script src="static/js/index.js"></script>
 
+    <h1>Password generator</h1>
+    <label for="fmt-string">Format:</label>
     <input type="text" id="fmt-string" value="ccdd">
     <br>
     <br>
+
+    <span>Length:</span>
     <button id="rep-button-1" onclick="repeat(1)">4 </button>
     <button id="rep-button-2" onclick="repeat(2)">8 </button>
     <button id="rep-button-3" onclick="repeat(3)">12</button>
@@ -41,9 +45,74 @@
     <br>
     <button onclick="generate()">generate</button>
     <br>
-    <br>
     <ul id="password-list"></ul>
     <div id="clear-button-container"></div>
+
+    <!--------->
+    <h2>Presets</h2>
+    <button onclick="set_preset('zaaz4d')">zaaz4d</button>
+    <button onclick="set_preset('zaza4d')">zaza4d</button>
+    <button onclick="set_preset('zaza4dZAAZddds')">zaza4dZAAZddds</button>
+    <button onclick="set_preset('zaazaz4dZAAZAZ4d')">zaazaz4dZAAZAZ4d</button>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h1>About</h1>
+
+    <p>This password generator generates passwords with predefined format that
+    are easy to type.</p>
+
+    <p>For example, you can create a password with repeating groups of 4
+    characters and 4 digits.</p>
+
+    <p>Also it excludes look-alike characters like o/O/0 or l/I/1</p>
+
+    <h3>Format</h3>
+    <ul id="format-doc">
+      <li><code>c</code> lowercase character</li>
+      <li><code>C</code> uppercase character</li>
+      <li><code>d</code> or <code>D</code> digit</li>
+      <li><code>a</code> lowercase vowel (aeiou)</li>
+      <li><code>A</code> uppercase vowel (AEIOU)</li>
+      <li><code>z</code> lowercase consonant (bcdfghjklmnpqrstvwxz)</li>
+      <li><code>Z</code> uppercase consonant (BCDFGHJKLMNPQRSTVWXZ)</li>
+      <li><code>s</code> or <code>S</code> a special character (!@#$%^&*?)</li>
+    </ul>
+
+    <h3>Security considerations</h3>
+    <p>Using predefined patterns and limiting the character set inevitably
+    makes the password less random and therefore less secure. But when you
+    make your password long-enough, this isn't really an issue, because a very
+    long simple password is stronger than a short and complicated one.</p>
+    <p>This generator uses zthe
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues">
+        <code>Crypto.getRandomValues()</code></a>
+    API to generate cryptographically strong random choices from the
+    individual character sets.
+    </p>
+
+    <h3>When this is useful</h3>
+
+    <p>There are situations where you have to type passwords manually, for
+    example:</p>
+
+    <ul>
+      <li>logging in at school computers and library computers</li>
+      <li>using remote management consoles</li>
+      <li>unlocking encrypted partitions at boot time</li>
+    </ul>
+
+    <p>So you open your password manager, on your phone or elsewhere, and
+    slowly start typing the password. The groups of characters make it easier
+    to keep parts of the password in your short-term memory and type the
+    password with less effort.</p>
 
   </body>
 </html>

@@ -78,6 +78,15 @@ function clear_passwords() {
     add_or_remove_clear_button()
 }
 
+function set_preset(preset) {
+    (
+        document
+        .getElementById("fmt-string")
+        .value = preset
+    )
+    update_buttons()
+}
+
 /* depends on pwdgen.js */
 function generate() {
     const p = new Password()

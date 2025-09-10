@@ -16,3 +16,14 @@
 #password-list li .copy-button {
     margin-left: 0.8em;
 }
+
+#format-doc li code {
+    color: red;
+    font-size: larger;
+    background-color: #ffdddd;
+    padding-inline: 0.1em;
+}
+
+#format-doc li {
+    margin-block: 0.4em;
+}
