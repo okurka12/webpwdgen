@@ -1,1 +1,14 @@
 /* styles for password generator */
+#password-list li span {
+    font-size: small;
+    color: gray;
+    padding-left: 1em;
+}
+
+#password-list li code {
+    font-size: larger;
+}
+
+#password-list li {
+    padding-block: 0.3em;
+}
