@@ -7,6 +7,7 @@ function get_fmt_string() {
     return document.getElementById("fmt-string").value
 }
 
+/* depends on pwdgen.js */
 function update_buttons() {
 
     const p = new Password()
@@ -29,10 +30,28 @@ function repeat(n) {
 }
 
 function append_password_to_list(password) {
-    const el = document.createElement("li")
-    el.innerHTML = `<code>${password}</code><span>length: ${password.length}</span>`
-    document.getElementById("password-list").appendChild(el)
+    const list_item_el = document.createElement("li")
+    const password_el = document.createElement("code")
+    const length_hint_el = document.createElement("span")
+    const password_el_id = crypto.randomUUID()
+    const copy_btn_el = document.createElement("button")
+
+    password_el.innerText = password
+    password_el.setAttribute("id", password_el_id)
+
+    length_hint_el.innerText = `length: ${password.length}`
+
+    copy_btn_el.setAttribute("class", "copy-button")
+    copy_btn_el.setAttribute("textid", password_el_id)
+
+    list_item_el.appendChild(password_el)
+    list_item_el.appendChild(copy_btn_el)
+    list_item_el.appendChild(length_hint_el)
+
+    document.getElementById("password-list").appendChild(list_item_el)
     add_or_remove_clear_button()
+
+    render_buttons() /* from copy-button.js */
 }
 
 function add_clear_button_if_not_already_there() {
@@ -59,6 +78,7 @@ function clear_passwords() {
     add_or_remove_clear_button()
 }
 
+/* depends on pwdgen.js */
 function generate() {
     const p = new Password()
     for (let i = 0; i < repetitions; i++) {
