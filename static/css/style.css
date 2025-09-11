@@ -17,13 +17,13 @@
     margin-left: 0.8em;
 }
 
-#format-doc li code {
+.format-doc code {
     color: red;
     font-size: larger;
-    background-color: #ffdddd;
+    background-color: #ffdddd;č
     padding-inline: 0.1em;
 }
 
-#format-doc li {
+.format-doc li {
     margin-block: 0.4em;
 }

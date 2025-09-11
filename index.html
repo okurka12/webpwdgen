@@ -73,10 +73,10 @@
     <p>For example, you can create a password with repeating groups of 4
     characters and 4 digits.</p>
 
-    <p>Also it excludes look-alike characters like o/O/0 or l/I/1</p>
+    <p>Also it excludes look-alike characters like o/O/0 or l/I/1.</p>
 
     <h3>Format</h3>
-    <ul id="format-doc">
+    <ul class="format-doc">
       <li><code>c</code> lowercase character</li>
       <li><code>C</code> uppercase character</li>
       <li><code>d</code> or <code>D</code> digit</li>
@@ -87,12 +87,15 @@
       <li><code>s</code> or <code>S</code> a special character (!@#$%^&*?)</li>
     </ul>
 
+    <p class="format-doc">Specifying <code>4d</code> is the same as
+    <code>dddd</code>.</p>
+
     <h3>Security considerations</h3>
     <p>Using predefined patterns and limiting the character set inevitably
     makes the password less random and therefore less secure. But when you
     make your password long-enough, this isn't really an issue, because a very
     long simple password is stronger than a short and complicated one.</p>
-    <p>This generator uses zthe
+    <p>This generator uses the
       <a href="https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues">
         <code>Crypto.getRandomValues()</code></a>
     API to generate cryptographically strong random choices from the
